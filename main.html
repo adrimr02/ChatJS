@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <title>ChatJS</title>
+</head>
+<body>
+  <div class="container">
+    <div class="inbox">
+      <div class="inbox__people">
+        <h4>Usuarios activos</h4>
+        <hr>
+      </div>
+      <div class="inbox__messages">
+        <div class="messages__history"></div>
+        <div class="fallback"></div>
+      </div>
+    </div>
+
+    <form class="message__form">
+      <input type="text" class="message__form__input" placeholder="Escribe un mensaje" autofocus>
+      <button class="message__form__button" type="submit">
+        Enviar
+      </button> 
+    </form>
+  </div>
+  <script src="socket.io/socket.io.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

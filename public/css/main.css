@@ -1,0 +1,129 @@
+.inbox {
+  height: 87vh;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.inbox__people {
+  float: left;
+  width: 20%;
+  background: #ebebeb;
+  border-right: 1px solid black;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  height: inherit;
+  overflow-y: auto;
+}
+
+.inbox__people h4 {
+  font-weight: bold;
+  font-size: 1.8em;
+  margin-left: 10px;
+  text-align: center;
+}
+
+hr {
+  display: block;
+  height: 0.2em;
+  border: 0;
+  border-top: 1px solid #53993c;
+  margin: 1em 0;
+  padding: 0; 
+}
+
+.inbox__messages {
+  float: right;
+  width: 79.5%;
+  top: 0;
+  padding: 0px;
+  height: inherit;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-top: 3px;
+}
+
+.chat_ib {
+  margin-left: 10px;
+}
+
+.user_name {
+  font-weight: bold;
+  font-size: 16px;
+  color: #53993c;
+}
+
+.outgoing__message {
+  width: 55%;
+  float: right;
+  margin-bottom: 5px;
+}
+
+.incoming__message {
+  width: 55%;
+  float: left;
+  margin-bottom: 5px ;
+}
+
+.sent__message p {
+  border-radius: 5px;
+  background: #53993c;
+  color: white;
+  white-space: pre-wrap;
+  font-size: 1.3em;
+  height: auto;
+  padding: 4px;
+  margin: 0px;
+  margin-right: 5px;
+  text-align: justify;
+}
+
+.received__message p {
+  border-radius: 5px;
+  border: 1px solid gray;
+  background: #ebebeb;
+  color: black;
+  white-space: pre-wrap;
+  font-size: 1.3em;
+  height: auto;
+  padding: 4px;
+  margin: 0px;
+  text-align: justify;
+}
+
+.message__info {
+  margin-left: 20px;
+}
+
+
+
+
+.message__form {
+  align-content: center;
+  position: fixed;
+  bottom: 0px;
+  margin-top: 20px;
+  margin-bottom: 2vh;
+  width: 100%;
+  height: auto;
+}
+
+.message__form__input {
+  width: 85%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border-radius: 10px;
+  font-size: 1.6;
+  box-sizing: border-box;
+}
+
+.message__form__button {
+  width: 10%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 1em;
+  color: white;
+  background: #53993c;
+}
