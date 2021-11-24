@@ -1,14 +1,14 @@
 {
   "name": "ChatJS",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple chat aplication using websockets",
   "main": "index.js",
   "scripts": {
     "start": "node index.js --ignore 'public/js/*.js'",
     "dev": "nodemon index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Adrián Martínez",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
