@@ -1,3 +1,15 @@
+body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .inbox {
   height: 87vh;
   border: 1px solid black;
@@ -40,6 +52,7 @@ hr {
   overflow-y: auto;
   overflow-x: hidden;
   margin-top: 3px;
+  margin-bottom: 5px;
 }
 
 .chat_ib {
@@ -92,17 +105,17 @@ hr {
 
 .message__info {
   margin-left: 20px;
+  margin-bottom: 3px;
+}
+
+.message__link {
+  text-decoration: none;
 }
 
 
 
 
 .message__form {
-  align-content: center;
-  position: fixed;
-  bottom: 0px;
-  margin-top: 20px;
-  margin-bottom: 2vh;
   width: 100%;
   height: auto;
 }
@@ -117,7 +130,7 @@ hr {
 }
 
 .message__form__button {
-  width: 10%;
+  width: 14%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;

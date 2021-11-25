@@ -34,12 +34,13 @@ io.on('connection', (socket) => {
     var args = command.slice(1,command.length);
     args = args.filter(arg => arg);
     command = command[0];
-    switch (command ) {
+    switch (command) {
       case 'help':
         socket.emit('chat message', {
           message: 'Ayuda de comandos:<br>'+
-          '· /help: Muestra la lista de comandos<br>'+
-          '· /clear: Borra todos los mensajes anteriores',
+          '/help: Muestra la lista de comandos<br>'+
+          '/clear: Borra todos los mensajes anteriores<br>'+
+          '/link <url> [mensaje]: Envia un link<br>',
           nick: 'Server'
         });
         break;
@@ -47,6 +48,27 @@ io.on('connection', (socket) => {
         messages.length=0;
         io.emit('load old messages', messages);
         break;
+      case 'link':
+        if (!args[0]) {
+          socket.emit('chat message', {
+            message: 'Faltan argumentos<br>Sintaxis correcta: /link &lt;url&gt; [mensaje]',
+            nick: 'Server'
+          });
+          break;
+        }
+        var url = args[0];
+        if (!url.includes("https://") && !url.includes("http://")) {
+          url = 'http://' + url;
+        }
+        let message = "";
+        for (let i = 1; i<args.length; i++) {
+          message += args[i] + " ";
+        }
+        io.emit('chat message', {
+          message: `<a class="message__link" href="${url}" target="_blank">${args[0]}</a><br>` + message,
+          nick: data.nick
+        });
+
       default:
         break;
     }
